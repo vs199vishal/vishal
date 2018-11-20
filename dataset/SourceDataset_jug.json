@@ -1,0 +1,35 @@
+{
+	"name": "SourceDataset_jug",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "tdate",
+				"type": "String"
+			},
+			{
+				"name": "amount",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"nullValue": "\\N",
+				"encodingName": null,
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "transactions.txt",
+			"folderPath": "vishal/input"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
